@@ -6,23 +6,29 @@ authors = ["geo1310 <gbriche59@yahoo.fr>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
+
 python = "^3.11"
 Django = "^5.0.6"
-flake8 = "^7.1.0"
+
+sentry-sdk = {extras = ["django"], version = "^2.7.1"}
+gunicorn = "^22.0.0"
+whitenoise = "^6.7.0"
+uvicorn = "^0.30.1"
+
+
+[tool.poetry.group.test.dependencies]
+
 pytest-django = "^4.8.0"
 black = "^24.4.2"
 isort = "^5.13.2"
+flake8 = "^7.1.0"
 djhtml = "^3.0.6"
 pycln = "^2.4.0"
 pytest-html = "^4.1.1"
 django-coverage = "^1.2.4"
 coverage = "^7.5.4"
 pytest-coverage = "^0.0"
-sentry-sdk = {extras = ["django"], version = "^2.7.1"}
 python-dotenv = "^1.0.1"
-gunicorn = "^22.0.0"
-whitenoise = "^6.7.0"
-uvicorn = "^0.30.1"
 
 
 [build-system]
